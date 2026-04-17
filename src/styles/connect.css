@@ -1,0 +1,117 @@
+#connect {
+  background: var(--yellow);
+  color: var(--black);
+  text-align: center;
+  padding: 140px 48px;
+}
+
+#connect .section-label {
+  color: var(--black);
+  justify-content: center;
+}
+
+#connect .section-label::before {
+  background: var(--black);
+}
+
+.connect-heading {
+  font-size: clamp(4rem, 10vw, 12rem);
+  font-weight: 800;
+  letter-spacing: -0.05em;
+  line-height: 0.88;
+  margin: 32px 0 48px;
+}
+
+.connect-heading em {
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-weight: 400;
+  color: var(--black);
+}
+
+.connect-loves {
+  margin: 48px 0;
+}
+
+.connect-loves-label {
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  opacity: 0.5;
+  margin-bottom: 20px;
+}
+
+.loves-pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  justify-content: center;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.love-pill {
+  padding: 10px 24px;
+  border: 2px solid var(--black);
+  border-radius: 100px;
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 0.82rem;
+  letter-spacing: 0.05em;
+  transition: background 0.2s, color 0.2s;
+  cursor: default;
+}
+
+.love-pill:hover {
+  background: var(--black);
+  color: var(--yellow);
+}
+
+.connect-links {
+  display: flex;
+  gap: 24px;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 64px;
+}
+
+.connect-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 18px 40px;
+  border: 2px solid var(--black);
+  border-radius: 100px;
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 0.88rem;
+  letter-spacing: 0.05em;
+  color: var(--black);
+  text-decoration: none;
+  cursor: none;
+  transition: background 0.3s, color 0.3s;
+}
+
+.connect-link.primary {
+  background: var(--black);
+  color: var(--yellow);
+}
+
+.connect-link:not(.primary):hover {
+  background: var(--black);
+  color: var(--yellow);
+}
+
+.connect-link.primary:hover {
+  opacity: 0.85;
+}
+
+.connect-location {
+  margin-top: 80px;
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  letter-spacing: 0.2em;
+  opacity: 0.5;
+  text-transform: uppercase;
+}

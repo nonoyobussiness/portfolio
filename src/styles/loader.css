@@ -1,0 +1,32 @@
+#loader {
+  position: fixed;
+  inset: 0;
+  background: var(--yellow);
+  z-index: 10000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 24px;
+}
+
+#loader-text {
+  font-size: clamp(3rem, 10vw, 9rem);
+  font-weight: 800;
+  color: var(--black);
+  font-family: var(--font-display);
+  letter-spacing: -0.04em;
+  overflow: hidden;
+}
+
+#loader-text span {
+  display: inline-block;
+}
+
+#loader-sub {
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  color: var(--black);
+  opacity: 0.6;
+  letter-spacing: 0.2em;
+}

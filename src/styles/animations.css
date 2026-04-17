@@ -1,0 +1,56 @@
+@keyframes pulse {
+  0%,
+  100% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0.3;
+  }
+}
+
+@keyframes ticker {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+@keyframes scrollline {
+  0% {
+    transform: scaleY(0);
+    transform-origin: top;
+  }
+
+  50% {
+    transform: scaleY(1);
+    transform-origin: top;
+  }
+
+  51% {
+    transform: scaleY(1);
+    transform-origin: bottom;
+  }
+
+  100% {
+    transform: scaleY(0);
+    transform-origin: bottom;
+  }
+}
+
+.fade-up {
+  opacity: 0;
+  transform: translateY(60px);
+}
+
+.fade-in {
+  opacity: 0;
+}
+
+.slide-right {
+  opacity: 0;
+  transform: translateX(-60px);
+}

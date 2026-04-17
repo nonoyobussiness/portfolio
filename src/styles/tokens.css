@@ -1,0 +1,12 @@
+:root {
+  --yellow: #f5e642;
+  --yellow-dark: #d4c500;
+  --black: #0a0a0a;
+  --white: #f7f4ec;
+  --cream: #f0ebd8;
+  --gray: #888880;
+  --accent: #ff4d1c;
+  --font-display: "Syne", sans-serif;
+  --font-serif: "Instrument Serif", serif;
+  --font-mono: "DM Mono", monospace;
+}

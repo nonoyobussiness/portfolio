@@ -1,0 +1,94 @@
+@media (max-width: 900px) {
+  nav {
+    padding: 24px 24px;
+  }
+
+  section {
+    padding: 100px 24px;
+  }
+
+  .hero-inner {
+    min-height: auto;
+    grid-template-columns: 1fr;
+    gap: 24px;
+    padding-top: 112px;
+    padding-bottom: 64px;
+  }
+
+  .hero-copy {
+    max-width: none;
+  }
+
+  .hero-cta-col {
+    align-items: flex-start;
+    margin-top: 28px;
+  }
+
+  .hero-visual {
+    min-height: auto;
+    justify-content: center;
+  }
+
+  .hero-img-wrap {
+    width: min(82vw, 480px);
+    height: min(108vw, 620px);
+    justify-self: center;
+    margin-top: 0;
+    margin-right: 0;
+  }
+
+  .doodle-note {
+    left: 0;
+  }
+
+  .doodle-pill-design {
+    left: 0;
+  }
+
+  .doodle-pill-build {
+    right: 6%;
+  }
+
+  .about-grid {
+    grid-template-columns: 1fr;
+    gap: 48px;
+  }
+
+  .works-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 32px;
+  }
+
+  #home {
+    padding: 0 24px;
+  }
+
+  .scroll-indicator {
+    display: none;
+  }
+
+  footer {
+    flex-direction: column;
+    gap: 16px;
+    text-align: center;
+  }
+
+  .nav-links {
+    gap: 20px;
+  }
+
+  .connect-heading {
+    font-size: clamp(3rem, 14vw, 6rem);
+  }
+}
+
+@media (max-width: 600px) {
+  .nav-links {
+    display: none;
+  }
+
+  .nav-status {
+    display: none;
+  }
+}
