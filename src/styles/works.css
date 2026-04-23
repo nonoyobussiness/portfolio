@@ -55,6 +55,8 @@
 }
 
 .work-item {
+  text-decoration: none;
+  color: inherit;
   border-top: 1px solid rgba(255, 255, 255, 0.08);
   padding: 40px 0;
   display: grid;

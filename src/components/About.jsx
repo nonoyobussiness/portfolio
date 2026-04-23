@@ -12,9 +12,7 @@ function About() {
         </div>
         <div className="about-right">
           <div className="about-bio fade-up">
-            I&apos;m Vatsal — a designer and developer with an eye for detail and a love for things
-            that feel <strong>alive on screen</strong>. I blend design intuition with engineering
-            precision to build interfaces people actually enjoy using.
+            I&apos;m Vatsal - a full-stack developer who obsesses over both the code and how it feels. I build everything from the database up, and I care just as much about the interface at the end of it. 
             <br />
             <br />
             Currently open to exciting freelance projects, collaborations, and full-time
@@ -23,7 +21,7 @@ function About() {
           <div className="about-stats fade-up">
             <div className="stat-box">
               <div className="stat-num">
-                10<sup>+</sup>
+                2<sup>+</sup>
               </div>
               <div className="stat-label">Projects shipped</div>
             </div>
@@ -34,22 +32,22 @@ function About() {
               <div className="stat-label">Years experience</div>
             </div>
             <div className="stat-box">
-              <div className="stat-num">∞</div>
-              <div className="stat-label">Coffee consumed</div>
+              <div className="stat-text">Full</div>
+              <div className="stat-label">Stack ownership</div>
             </div>
             <div className="stat-box">
-              <div className="stat-num">1</div>
-              <div className="stat-label">Vision: impact</div>
+              <div className="stat-text">Now</div>
+              <div className="stat-label">Learning: AI/ML + Python</div>
             </div>
           </div>
           <div className="skill-pills fade-up">
             <div className="pill">React</div>
             <div className="pill">Tailwind</div>
-            <div className="pill">GSAP</div>
+            <div className="pill">MongoDB</div>
             <div className="pill">Figma</div>
             <div className="pill">Next.js</div>
             <div className="pill">UI/UX</div>
-            <div className="pill">Branding</div>
+            <div className="pill">TypeScript</div>
             <div className="pill">Node.js</div>
           </div>
         </div>

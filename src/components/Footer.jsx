@@ -23,7 +23,7 @@ function Footer() {
   return (
     <footer>
       <div className="logo">V/</div>
-      <div className="copy">© 2024 Vatsal. Crafted with obsession.</div>
+      <div className="copy">© 2026 Vatsal. Crafted with obsession.</div>
       <NavLink to="/" className="back-top" onClick={handleBackToTop}>
         Back to top ↑
       </NavLink>

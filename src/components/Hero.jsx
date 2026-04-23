@@ -5,21 +5,21 @@ function Hero() {
 
   const handleScrollLink = (event, sectionId) => {
     event.preventDefault();
-    navigate(`/?section=${sectionId}`, { replace: true });
 
-    requestAnimationFrame(() => {
+    navigate(`/?section=${sectionId}`);
+
+    // ⏳ wait a bit for DOM to update
+    setTimeout(() => {
       const target = document.getElementById(sectionId);
-      if (!target) {
-        return;
-      }
+
+      if (!target) return;
 
       if (window.__lenis) {
         window.__lenis.scrollTo(target);
-        return;
+      } else {
+        target.scrollIntoView({ behavior: "smooth" });
       }
-
-      target.scrollIntoView({ behavior: "smooth" });
-    });
+    }, 100); // small delay fixes it
   };
 
   return (
@@ -32,11 +32,11 @@ function Hero() {
             <div className="hero-role-row fade-up">
               <div className="role-badge">
                 <div className="badge-dot"></div>
-                Designer
+                FULL STACK DEVELOPER
               </div>
               <div className="role-badge">
                 <div className="badge-dot"></div>
-                Developer
+                UI/UX designer
               </div>
             </div>
 
@@ -55,20 +55,21 @@ function Hero() {
               <strong>This started with curiosity. </strong>
               Now it’s a mix of design, code, and a lot of “what if I try this?”
               Somewhere in between, <strong>shit got interesting.</strong>
-            </div>
+            </div>  
 
             <div className="hero-cta-col fade-up">
               <a
-                href="#/contact"
+                href="#"
                 className="btn-primary"
                 onClick={(event) => handleScrollLink(event, "connect")}
               >
                 <span>Contact Me</span>
                 <div className="btn-arrow">↗</div>
               </a>
-              <NavLink
-                to="/projects"
+              <a
+                href="#"
                 className="btn-primary"
+                onClick={(event) => handleScrollLink(event, "works")}
                 style={{
                   background: "transparent",
                   border: "1.5px solid rgba(255,255,255,0.2)",
@@ -77,7 +78,7 @@ function Hero() {
               >
                 <span>View Works</span>
                 <div className="btn-arrow">↓</div>
-              </NavLink>
+              </a>
             </div>
           </div>
 
@@ -90,7 +91,7 @@ function Hero() {
               <div className="hero-doodle doodle-arrow">↘</div>
               <div className="hero-doodle doodle-pill doodle-pill-react">Not debugging the hair</div>
               <div className="hero-doodle doodle-pill doodle-pill-design">Centered with feelings</div>
-              <div className="hero-doodle doodle-pill doodle-pill-build">This is intentional (it’s not)</div>
+              <div className="hero-doodle doodle-pill doodle-pill-build">This is not AI at all </div>
               <div className="hero-doodle doodle-star doodle-star-one">✦</div>
               <div className="hero-doodle doodle-star doodle-star-two">✦</div>
               <div className="hero-doodle doodle-star doodle-star-three">✧</div>

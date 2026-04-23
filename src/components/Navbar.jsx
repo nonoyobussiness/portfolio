@@ -27,6 +27,47 @@ function Navbar() {
   }, [locationSection, location.pathname]);
 
   useEffect(() => {
+  if (!isHomeRoute) return;
+
+  const sectionIds = ["home", "about", "works", "connect"];
+
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (!entry.isIntersecting) return;
+
+        const id = entry.target.id;
+
+        // map real section id back to nav section key
+        const sectionKey =
+          Object.entries(SECTION_TARGETS).find(([, val]) => val === id)?.[0] ?? id;
+
+        setActiveSection(sectionKey === "home" ? null : sectionKey);
+
+        // update URL too
+        if (sectionKey === "home") {
+          window.history.replaceState({}, "", "/");
+        } else {
+          const params = new URLSearchParams(window.location.search);
+          params.set("section", sectionKey);
+          window.history.replaceState({}, "", `/?${params.toString()}`);
+        }
+      });
+    },
+    {
+      threshold: 0.4, // section must be 40% visible to trigger
+    }
+  );
+
+  sectionIds.forEach((id) => {
+    const el = document.getElementById(id);
+    if (el) observer.observe(el);
+  });
+
+  return () => observer.disconnect();
+}, [isHomeRoute]);
+
+  useEffect(() => {
     const syncFromUrl = () => {
       const section = new URLSearchParams(window.location.search).get("section");
       setActiveSection(section ?? null);
@@ -82,7 +123,11 @@ function Navbar() {
     requestAnimationFrame(() => scrollToSection(sectionId));
   };
 
-  const isSectionActive = (sectionId) => isHomeRoute && activeSection === sectionId;
+  const isSectionActive = (sectionId) => {
+    if (!isHomeRoute) return false;
+    if (sectionId === "home") return !activeSection;
+    return activeSection === sectionId;
+  };
 
   return (
     <nav id="navbar">
@@ -93,8 +138,18 @@ function Navbar() {
         <li>
           <NavLink
             to="/"
-            className={({ isActive }) => {
-              return isActive && !activeSection ? "active" : "";
+            className={() => (isSectionActive("home") ? "active" : "")}
+            onClick={(event) => {
+              event.preventDefault();
+
+              // clear section from URL
+              window.history.pushState({}, "", "/");
+
+              // reset your state
+              setActiveSection(null);
+
+              // scroll to top
+              window.scrollTo({ top: 0, behavior: "smooth" });
             }}
           >
             Home
