@@ -43,7 +43,12 @@ function Connect() {
         >
           ↗ LinkedIn
         </a>
-        <a href="dist/assets/Sreevathsal-se23ucse081-Resume.pdf" target="_blank" rel="noreferrer" className="connect-link">
+        <a
+          href={`${import.meta.env.BASE_URL}/Sreevathsal-se23ucse081-Resume.pdf`}
+          target="_blank"
+          rel="noreferrer"
+          className="connect-link"
+        >
           Resume
         </a>
       </div>

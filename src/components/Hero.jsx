@@ -85,7 +85,7 @@ function Hero() {
           <div className="hero-visual fade-up">
             <div className="hero-img-wrap fade-up">
               <div className="hero-img-box">
-                <img src="/hero-image.png" alt="Vatsal portrait" />
+                <img src={`${import.meta.env.BASE_URL}/hero-image.png`} />
               </div>
               <div className="hero-doodle doodle-note">that&apos;s me →</div>
               <div className="hero-doodle doodle-arrow">↘</div>
