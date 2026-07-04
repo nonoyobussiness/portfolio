@@ -16,19 +16,21 @@ const WORKS_DATA = [
   },
   {
     number: "03",
-    title: "Timebomb - Timed Social Media",
-    tags: ["UI/UX", "Typescript", "Python", "2026"],
-    github: "https://github.com/nonoyobussiness/Timebomb"
+    title: "Candidate resume ranker",
+    tags: ["Python", "Embeddings filtering", "FAISS", "Recommender system", "2026"],
+    github: "https://github.com/nonoyobussiness/redrob-candidate-ranker"
   },
   {
     number: "04",
-    title: "Telugu Lyrics Understanding System",
-    tags: ["Python", "NLP", "Planned"],
+    title: "Sentinal1 Flood detection pipeline",
+    tags: ["Python", "Data Analysis"],
+    github:"https://github.com/nonoyobussiness/sentinal1-flood-detection-pipeline"
   },
   {
     number: "05",
-    title: "Idea Builder AI",
-    tags: ["UI/UX", "React", "Typescript", "Python", "Planned"],
+    title: "Human annotator disagreement predictor",
+    tags: ["ML", "Python"],
+    github:"https://github.com/nonoyobussiness/human_annotator_disagreement_predictor"
   },
 ];
 
